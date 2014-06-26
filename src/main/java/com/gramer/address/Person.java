@@ -4,15 +4,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.joda.time.DateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
-
-/**
- * Created by Administrator on 2014-06-25.
- */
 
 @Data
 @NoArgsConstructor
+@Entity
 public class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String name;
     private Date birthday;
