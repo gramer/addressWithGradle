@@ -17,7 +17,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
 
 
-@ContextConfiguration
+@ContextConfiguration(locations = {"classpath:/META-INF/spring/app-context.xml"})
 @RunWith(SpringJUnit4ClassRunner.class)
 public class PersonTest {
 
